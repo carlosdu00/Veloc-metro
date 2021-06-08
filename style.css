@@ -1,0 +1,43 @@
+body{
+    background-color: rgb(110, 39, 39);
+    font: normal 13pt Arial;
+}
+header{
+    font-size: 17pt;
+    color: white;
+    text-align: center;
+}
+section{
+    background-color: rgb(255, 255, 255) ;
+    border-radius: 10px;
+    width: 500px;
+    margin: auto;
+    padding: 15px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.308);
+}
+footer{
+    color: white;
+    text-align: center;
+    font-size: 9pt;
+}
+div.display{
+        position: relative;
+        top: 0;
+        left: 0;
+}
+img#velocimetro {
+    position: relative;
+    top: 0px;
+    left: 0px;
+  }
+img#ponteiro {
+    position: absolute;
+    top: 55px;
+    left: 125px;
+  }
+p#mostradorMarcha{
+    position: absolute;
+    top: 240px;
+    left: 235px;
+    font-size: 30pt;
+}
