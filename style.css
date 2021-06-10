@@ -21,9 +21,9 @@ footer{
     font-size: 9pt;
 }
 div.display{
-        position: relative;
-        top: 0;
-        left: 0;
+    position: relative;
+    top: 0;
+    left: 0;
 }
 img#velocimetro {
     position: relative;
@@ -40,4 +40,16 @@ p#mostradorMarcha{
     top: 240px;
     left: 235px;
     font-size: 30pt;
+}
+div#botoes{
+    position: absolute;
+    top: 380px;
+    left: 370px;
+}
+
+input#botao{
+    width: 70px;
+    height: 40px;
+    margin: 2px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.308);
 }
