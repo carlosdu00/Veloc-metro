@@ -11,15 +11,15 @@ O mecanismo de velocidade deve estar atrelado às marchas. O sistema deverá inc
 
 Cada marcha tem uma velocidade compatível conforme listagem abaixo:
 
-● 1a — 00 até 20 km/h
+● 1ª — 00 até 20 km/h
 
-● 2a — 20 até 40 km/h
+● 2ª — 20 até 40 km/h
 
-● 3a — 40 até 60 km/h
+● 3ª — 40 até 60 km/h
 
-● 4a — 60 até 80 km/h
+● 4ª — 60 até 80 km/h
 
-● 5a — 80 até 100 km/h
+● 5ª — 80 até 100 km/h
 
 ### Observações:
 
