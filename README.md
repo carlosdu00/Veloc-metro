@@ -1,4 +1,4 @@
-# Acelerador
+# Velocímetro
 ## Simulação simples do sistema de aceleração e marchas de um veículo.
 
 <h4 align="center">🚧Projeto em construção...🚧</h4>
