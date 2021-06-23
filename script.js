@@ -2,8 +2,19 @@ var mostradorMarcha = document.getElementById("mostradorMarcha")
 var veiculo
 var veiculoEscolhido
 
+const botaomoto = document.getElementById("botaomoto")
+const botaocarro = document.getElementById("botaocarro")
+const botaoclicado = document.getElementsByClassName("botaoclicado")
 
 function escolhaInicial(veiculoEscolhido) {
+    if(veiculoEscolhido == moto){
+        botaocarro.className=("botaonormal")
+        botaomoto.className=("botaoclicado")
+    }
+    else{
+        botaomoto.className=("botaonormal")
+        botaocarro.className=("botaoclicado")
+    }
     veiculo = veiculoEscolhido;
     veiculo.velocidade = 0
     veiculo.marcha = 0

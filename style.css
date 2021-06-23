@@ -47,9 +47,17 @@ div#botoes{
     left: 370px;
 }
 
-input#botao{
+input.botaonormal{
     width: 70px;
     height: 40px;
     margin: 2px;
-    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.308);
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0);
+}
+
+input.botaoclicado{
+    outline: 1px solid rgb(104, 26, 26);
+    width: 70px;
+    height: 40px;
+    margin: 2px;
+    box-shadow: 2px 2px 3px rgb(105, 36, 36);
 }
