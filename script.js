@@ -1,7 +1,6 @@
-var mostradorMarcha = document.getElementById("mostradorMarcha")
 var veiculo
-var veiculoEscolhido
 
+var veiculoEscolhido
 const botaomoto = document.getElementById("botaomoto")
 const botaocarro = document.getElementById("botaocarro")
 const botaoclicado = document.getElementsByClassName("botaoclicado")
@@ -172,6 +171,7 @@ async function moverPonteiro() {
     
 }   
 
+const mostradorMarcha = document.getElementById("mostradorMarcha")
 function atualizarMostradorMarcha() {
     if (veiculo.marcha == 0) {
         mostradorMarcha.innerText = "N"
