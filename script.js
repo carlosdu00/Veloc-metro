@@ -163,7 +163,14 @@ async function moverPonteiro() {
             ponteiro.setAttribute("style", "transform: rotate(" + (velocidadeMostradaPonteiro * 221 / 100 - 7) + "deg)");
         }
     }
-}
+    while(true){
+        await sleep(50);
+        ponteiro.setAttribute("style", "transform: rotate(" + (velocidadeMostradaPonteiro * 221 / 100 - 6) + "deg)");
+        await sleep(50);
+        ponteiro.setAttribute("style", "transform: rotate(" + (velocidadeMostradaPonteiro * 221 / 100 - 7) + "deg)");
+    }
+    
+}   
 
 function atualizarMostradorMarcha() {
     if (veiculo.marcha == 0) {
