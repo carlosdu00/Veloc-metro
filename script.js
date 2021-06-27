@@ -162,11 +162,11 @@ async function moverPonteiro() {
             ponteiro.setAttribute("style", "transform: rotate(" + (velocidadeMostradaPonteiro * 221 / 100 - 7) + "deg)");
         }
     }
-    while(true){
+    while(veiculo.velocidade!=0){
         await sleep(50);
-        ponteiro.setAttribute("style", "transform: rotate(" + (velocidadeMostradaPonteiro * 221 / 100 - 6) + "deg)");
+        ponteiro.setAttribute("style", "transform: rotate(" + (velocidadeMostradaPonteiro * 221 / 100 - 6.5) + "deg)");
         await sleep(50);
-        ponteiro.setAttribute("style", "transform: rotate(" + (velocidadeMostradaPonteiro * 221 / 100 - 7) + "deg)");
+        ponteiro.setAttribute("style", "transform: rotate(" + (velocidadeMostradaPonteiro * 221 / 100 - 7.5) + "deg)");
     }
     
 }   
