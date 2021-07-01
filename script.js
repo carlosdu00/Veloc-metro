@@ -26,7 +26,7 @@ function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
 
-document.addEventListener("keydown", function (event) {//detecta qual tecla esta sendo precionada
+document.addEventListener("keyup", function (event) {//detecta qual tecla esta sendo precionada
     console.log(event.key)
     switch (event.key) {
         case "ArrowUp":
