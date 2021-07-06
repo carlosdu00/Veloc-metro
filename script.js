@@ -47,10 +47,10 @@ async function moverPonteiro() {
             ponteiro.setAttribute("style", "transform: rotate(" + (velocidadeMostradaPonteiro * 221 / 100 - 7) + "deg)");
         }
     }
-    {// aqui fazemos o ponteiro ter um movimento de como se estivesse tremento (não é realista mas é legal)
-    while(veiculo.velocidade!=0)
+    // aqui fazemos o ponteiro ter um movimento de como se estivesse tremento (não é realista mas é legal)
+    while(veiculo.velocidade!=0){
         await sleep(50);
-        // fazemos isso alterando um pouquinho a rotação da imagem
+        // fazemos isso alterando um pouquinho a rotação da imagem um pouco para mais e um pouco para menos
         ponteiro.setAttribute("style", "transform: rotate(" + (velocidadeMostradaPonteiro * 221 / 100 - 6.5) + "deg)");
         await sleep(50);
         ponteiro.setAttribute("style", "transform: rotate(" + (velocidadeMostradaPonteiro * 221 / 100 - 7.5) + "deg)");
@@ -148,8 +148,13 @@ function verificarVelocidade(acao) {
     switch (veiculo.marcha) {
         case -1:
             if (acao == "acelerar") {
-                if (veiculo.velocidade <= 20) { veiculo.velocidade += 5 }
-                if (veiculo.velocidade > 20) { veiculo.velocidade = 20 }
+                if (veiculo.velocidade <= 20) {
+                     veiculo.velocidade += 5 
+                    }
+                    // faz a velocidade não passar de 20
+                if (veiculo.velocidade > 20) {
+                     veiculo.velocidade = 20 
+                    }
             }
             break;
         case 1:
