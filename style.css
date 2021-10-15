@@ -1,68 +1,77 @@
-body{
-    background-image: linear-gradient(to bottom,rgb(134, 44, 44),rgb(110, 39, 39),rgb(58, 18, 18));
+body {
+    background-image: linear-gradient(to bottom, rgb(134, 44, 44), rgb(110, 39, 39), rgb(58, 18, 18));
     background-attachment: fixed;
     font: normal 13pt Arial;
 }
-header{
+
+header {
     font-size: 17pt;
     color: white;
     text-align: center;
 }
-section{
-    background-color: rgb(255, 255, 255) ;
+
+section {
+    background-color: rgb(255, 255, 255);
     border-radius: 10px;
     width: 500px;
     margin: auto;
     padding: 15px;
     box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.308);
 }
-footer{
+
+footer {
     color: white;
     text-align: center;
     font-size: 9pt;
 }
-div.display{
+
+div.display {
     position: relative;
     top: 0;
     left: 0;
-}   
+}
+
 img#velocimetro {
     position: relative;
     top: 0px;
     left: 0px;
-  }
+}
+
 img#ponteiro {
     position: absolute;
     top: 55px;
     left: 125px;
-  }
-p#mostradorMarcha{
+}
+
+p#mostradorMarcha {
     position: absolute;
     top: 240px;
     left: 235px;
     font-size: 30pt;
 }
-#botoes{
+
+#botoes {
     position: absolute;
     top: 388px;
     left: 400px;
 }
 
-.botaonormal{
+.botaonormal {
     width: 70px;
     height: 42px;
     margin: 9px;
     box-shadow: 2px 2px 2px rgba(0, 0, 0, 0);
 }
 
-.botaoclicado{
+.botaoclicado {
     outline: 1px solid rgb(104, 26, 26);
     width: 70px;
     height: 42px;
     margin: 9px;
     box-shadow: 2px 2px 3px rgb(105, 36, 36);
 }
-.comandos{
+
+.comandos {
     outline: 1px solid rgba(161, 128, 128, 0.555);
     width: 360px;
     height: fit-content;

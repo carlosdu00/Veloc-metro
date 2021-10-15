@@ -10,8 +10,7 @@ function escolhaInicial(veiculoEscolhido) {
     if (veiculoEscolhido == moto) {
         botaocarro.className = ("botaonormal")
         botaomoto.className = ("botaoclicado")
-    }
-    else {
+    } else {
         botaomoto.className = ("botaonormal")
         botaocarro.className = ("botaoclicado")
     }
@@ -100,11 +99,13 @@ const moto = {
     },
     freiar: function () {
         //importante para que a velocidade acabe ficando negativa!
-        (this.velocidade >= 5) ? this.velocidade -= 5 : this.velocidade = 0
+        (this.velocidade >= 5) ? this.velocidade -= 5: this.velocidade = 0
     },
     //marcha não pode passar de 5
     subirMarcha: function () {
-        if (this.marcha < 5) { this.marcha += 1 }
+        if (this.marcha < 5) {
+            this.marcha += 1
+        }
     },
 
     descerMarcha: function () {
@@ -126,19 +127,20 @@ const carro = {
     },
     freiar: function () {
         //importante para que a velocidade acabe ficando negativa!
-        (this.velocidade >= 5) ? this.velocidade -= 5 : this.velocidade = 0
+        (this.velocidade >= 5) ? this.velocidade -= 5: this.velocidade = 0
     },
     subirMarcha: function () {
         //marcha não pode passar de 5
-        if (this.marcha < 5) { this.marcha += 1 }
+        if (this.marcha < 5) {
+            this.marcha += 1
+        }
     },
 
     descerMarcha: function () {
         // se o carro estiver no neutro e parado, pode engatar a ré
         if (this.marcha == 0 && this.velocidade == 0) {
             this.marcha -= 1
-        }
-        else if (this.marcha > -1 && verificarVelocidade("descer")) {
+        } else if (this.marcha > -1 && verificarVelocidade("descer")) {
             this.marcha -= 1
         }
     }
@@ -159,42 +161,71 @@ function verificarVelocidade(acao) {
             break;
         case 1:
             if (acao == "acelerar") {
-                if (veiculo.velocidade <= 20) { veiculo.velocidade += 5 }
-                if (veiculo.velocidade > 20) { veiculo.velocidade = 20 }
+                if (veiculo.velocidade <= 20) {
+                    veiculo.velocidade += 5
+                }
+                if (veiculo.velocidade > 20) {
+                    veiculo.velocidade = 20
+                }
+            } else if (acao == "descer") {
+                return true
             }
-            else if (acao == "descer") { return true }
             break;
         case 2:
             if (acao == "acelerar") {
-                if (veiculo.velocidade < 20) { veiculo.velocidade += 2 }
-                else if (veiculo.velocidade >= 20 && veiculo.velocidade <= 40) { veiculo.velocidade += 5 }
-                if (veiculo.velocidade > 40) { veiculo.velocidade = 40 }
+                if (veiculo.velocidade < 20) {
+                    veiculo.velocidade += 2
+                } else if (veiculo.velocidade >= 20 && veiculo.velocidade <= 40) {
+                    veiculo.velocidade += 5
+                }
+                if (veiculo.velocidade > 40) {
+                    veiculo.velocidade = 40
+                }
+            } else if (acao == "descer" && veiculo.velocidade <= 40) {
+                return true
             }
-            else if (acao == "descer" && veiculo.velocidade <= 40) { return true }
             break;
         case 3:
             if (acao == "acelerar") {
-                if (veiculo.velocidade < 40) { veiculo.velocidade += 2 }
-                else if (veiculo.velocidade >= 40 && veiculo.velocidade <= 60) { veiculo.velocidade += 5 }
-                if (veiculo.velocidade > 60) { veiculo.velocidade = 60 }
+                if (veiculo.velocidade < 40) {
+                    veiculo.velocidade += 2
+                } else if (veiculo.velocidade >= 40 && veiculo.velocidade <= 60) {
+                    veiculo.velocidade += 5
+                }
+                if (veiculo.velocidade > 60) {
+                    veiculo.velocidade = 60
+                }
+            } else if (acao == "descer" && veiculo.velocidade <= 60) {
+                return true
             }
-            else if (acao == "descer" && veiculo.velocidade <= 60) { return true }
             break;
         case 4:
             if (acao == "acelerar") {
-                if (veiculo.velocidade < 60) { veiculo.velocidade += 2 }
-                else if (veiculo.velocidade >= 60 && veiculo.velocidade <= 80) { veiculo.velocidade += 5 }
-                if (veiculo.velocidade > 80) { veiculo.velocidade = 80 }
+                if (veiculo.velocidade < 60) {
+                    veiculo.velocidade += 2
+                } else if (veiculo.velocidade >= 60 && veiculo.velocidade <= 80) {
+                    veiculo.velocidade += 5
+                }
+                if (veiculo.velocidade > 80) {
+                    veiculo.velocidade = 80
+                }
+            } else if (acao == "descer" && veiculo.velocidade <= 80) {
+                return true
             }
-            else if (acao == "descer" && veiculo.velocidade <= 80) { return true }
             break;
         case 5:
             if (acao == "acelerar") {
-                if (veiculo.velocidade < 80) { veiculo.velocidade += 2 }
-                else if (veiculo.velocidade >= 80 && veiculo.velocidade <= 100) { veiculo.velocidade += 5 }
-                if (veiculo.velocidade > 100) { veiculo.velocidade = 100 }
+                if (veiculo.velocidade < 80) {
+                    veiculo.velocidade += 2
+                } else if (veiculo.velocidade >= 80 && veiculo.velocidade <= 100) {
+                    veiculo.velocidade += 5
+                }
+                if (veiculo.velocidade > 100) {
+                    veiculo.velocidade = 100
+                }
+            } else if (acao == "descer" && veiculo.velocidade <= 100) {
+                return true
             }
-            else if (acao == "descer" && veiculo.velocidade <= 100) { return true }
             break;
         default:
             return
@@ -204,17 +235,14 @@ function verificarVelocidade(acao) {
 
 // mostrador q efica no meio do velocimeto que indica a marcha atual
 const mostradorMarcha = document.getElementById("mostradorMarcha")
+
 function atualizarMostradorMarcha() {
     if (veiculo.marcha == 0) {
         mostradorMarcha.innerText = "N"
-    }
-    else if (veiculo.marcha == -1) {
+    } else if (veiculo.marcha == -1) {
         mostradorMarcha.innerText = "R"
-    }
-    else {
+    } else {
         mostradorMarcha.innerText = `${veiculo.marcha}`
     }
 
 }
-
-
