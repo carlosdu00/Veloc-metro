@@ -49,8 +49,6 @@ em 2) ao invés de incrementado.
 ● Separe as responsabilidades (regras de negócio e interface com o usuário).
 
 ### Refatoração
-Refatore o código para que o controle de velocidade (incremento e decremento) e de
-marchas sejam atreladas as cilindradas (limite das velocidades).
 Implemente a classe carro que deverá possuir as mesmas características da motocicleta,
 entretanto deverá possuir a marcha ré.
 
